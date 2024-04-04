@@ -95,10 +95,12 @@ fieldset button:hover {
 }
 
 table {
+    width: 100%;
     border-collapse: collapse;
 }
 
 table thead {
+    text-align: left;
     font-size: 14px;
     line-height: 16px;
 }
