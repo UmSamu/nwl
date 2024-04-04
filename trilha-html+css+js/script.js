@@ -3,7 +3,7 @@ let participantes = [
       nome: "Diego Fernandes",
       email: "diego@gmail.com",
       dataInscricao: new Date(2024, 2, 1, 19, 23),
-      dataCheckIn: new Date(2024, 2, 1, 20, 20)
+      dataCheckIn: null
     },
     {
       nome: "Mayk Brito",
@@ -15,7 +15,7 @@ let participantes = [
       nome: "Ana Souza",
       email: "ana@gmail.com",
       dataInscricao: new Date(2024, 0, 3, 19, 23),
-      dataCheckIn: new Date(2024, 0, 4, 20, 20)
+      dataCheckIn: null
     },
     {
       nome: "João Silva",
@@ -39,7 +39,7 @@ let participantes = [
       nome: "Carla Lima",
       email: "carla@gmail.com",
       dataInscricao: new Date(2023, 8, 7, 19, 23),
-      dataCheckIn: new Date(2023, 8, 8, 20, 20)
+      dataCheckIn: null
     },
     {
       nome: "Lucas Sousa",
@@ -74,7 +74,7 @@ const criarNovoParticipante = (participante) => {
 
     return `
     <tr>
-        <td>${participante.nome}<br><small>${participante.email}</small></td>
+        <td><b>${participante.nome}</b><br><small>${participante.email}</small></td>
         <td>${dataInscricao}</td>
         <td>${dataCheckIn}</td>
     </tr>
@@ -130,7 +130,7 @@ const fazerCheckIn = (event) => {
     const participante = participantes.find(
         (p) => p.email == event.target.dataset.email
     )
-    
+
     participante.dataCheckIn = new Date()
 
     atualizarLista(participantes)
